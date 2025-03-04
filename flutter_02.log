@@ -1,0 +1,146 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run
+
+## exception
+
+FileSystemException: FileSystemException: Cannot open file, path = '/Users/anilkumar/Desktop/oracle_solutions_project/.dart_tool/dartpad/web_plugin_registrant.dart' (OS Error: Operation timed out, errno = 60)
+
+```
+#0      _checkForErrorResponse (dart:io/common.dart:56:9)
+#1      _File.open.<anonymous closure> (dart:io/file_impl.dart:381:7)
+#2      _rootRunUnary (dart:async/zone.dart:1422:47)
+#3      _CustomZone.runUnary (dart:async/zone.dart:1324:19)
+<asynchronous suspension>
+#4      _File.writeAsBytes.<anonymous closure> (dart:io/file_impl.dart:634:34)
+<asynchronous suspension>
+#5      ForwardingFile.writeAsString (package:file/src/forwarding/forwarding_file.dart:136:12)
+<asynchronous suspension>
+#6      ErrorHandlingFile.writeAsString.<anonymous closure> (package:flutter_tools/src/base/error_handling_io.dart:259:24)
+<asynchronous suspension>
+#7      _run (package:flutter_tools/src/base/error_handling_io.dart:569:12)
+<asynchronous suspension>
+#8      _renderTemplateToFile (package:flutter_tools/src/flutter_plugins.dart:40:3)
+<asynchronous suspension>
+#9      _writeWebPluginRegistrant (package:flutter_tools/src/flutter_plugins.dart:885:3)
+<asynchronous suspension>
+#10     injectBuildTimePluginFiles (package:flutter_tools/src/flutter_plugins.dart:1061:5)
+<asynchronous suspension>
+#11     WebProject.ensureReadyForPlatformSpecificTooling (package:flutter_tools/src/project.dart:985:5)
+<asynchronous suspension>
+#12     FlutterProject.ensureReadyForPlatformSpecificTooling (package:flutter_tools/src/project.dart:390:7)
+<asynchronous suspension>
+#13     FlutterCommand.verifyThenRunCommand (package:flutter_tools/src/runner/flutter_command.dart:1793:7)
+<asynchronous suspension>
+#14     FlutterCommand.run.<anonymous closure> (package:flutter_tools/src/runner/flutter_command.dart:1450:27)
+<asynchronous suspension>
+#15     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:153:19)
+<asynchronous suspension>
+#16     CommandRunner.runCommand (package:args/command_runner.dart:212:13)
+<asynchronous suspension>
+#17     FlutterCommandRunner.runCommand.<anonymous closure> (package:flutter_tools/src/runner/flutter_command_runner.dart:421:9)
+<asynchronous suspension>
+#18     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:153:19)
+<asynchronous suspension>
+#19     FlutterCommandRunner.runCommand (package:flutter_tools/src/runner/flutter_command_runner.dart:364:5)
+<asynchronous suspension>
+#20     run.<anonymous closure>.<anonymous closure> (package:flutter_tools/runner.dart:131:9)
+<asynchronous suspension>
+#21     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:153:19)
+<asynchronous suspension>
+#22     main (package:flutter_tools/executable.dart:94:3)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[33m[!][39m Flutter (Channel stable, 3.27.4, on macOS 14.5 23F79 darwin-arm64, locale en-IN)
+    [32m•[39m Flutter version 3.27.4 on channel stable at /Users/anilkumar/Dev/flutter
+    [33m![39m Warning: `dart` on your path resolves to /opt/homebrew/Cellar/dart-sdk/3.3.0/libexec/bin/dart, which is not inside your current Flutter SDK checkout at
+      /Users/anilkumar/Dev/flutter. Consider adding /Users/anilkumar/Dev/flutter/bin to the front of your path.
+    [32m•[39m Upstream repository https://github.com/flutter/flutter.git
+    [32m•[39m Framework revision d8a9f9a52e (3 weeks ago), 2025-01-31 16:07:18 -0500
+    [32m•[39m Engine revision 82bd5b7209
+    [32m•[39m Dart version 3.6.2
+    [32m•[39m DevTools version 2.40.3
+    [32m•[39m If those were intentional, you can disregard the above warnings; however it is recommended to use "git" directly to perform update checks and upgrades.
+
+[33m[!][39m Android toolchain - develop for Android devices (Android SDK version 34.0.0)
+    [32m•[39m Android SDK at /Users/anilkumar/Library/Android/sdk
+    [31m✗[39m cmdline-tools component is missing
+      Run `path/to/sdkmanager --install "cmdline-tools;latest"`
+      See https://developer.android.com/studio/command-line for more details.
+    [31m✗[39m Android license status unknown.
+      Run `flutter doctor --android-licenses` to accept the SDK licenses.
+      See https://flutter.dev/to/macos-android-setup for more details.
+
+[32m[✓][39m Xcode - develop for iOS and macOS (Xcode 15.2)
+    [32m•[39m Xcode at /Applications/Xcode.app/Contents/Developer
+    [32m•[39m Build 15C500b
+    [32m•[39m CocoaPods version 1.16.2
+
+[32m[✓][39m Chrome - develop for the web
+    [32m•[39m Chrome at /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+
+[32m[✓][39m Android Studio (version 2023.3)
+    [32m•[39m Android Studio at /Users/anilkumar/Applications/Android Studio.app/Contents
+    [32m•[39m Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    [32m•[39m Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    [32m•[39m Java version OpenJDK Runtime Environment (build 17.0.10+0-17.0.10b1087.21-11572160)
+
+[32m[✓][39m Android Studio (version 2023.1)
+    [32m•[39m Android Studio at /Users/itinkeradmin/Applications/Android Studio.app/Contents
+    [32m•[39m Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    [32m•[39m Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    [32m•[39m Java version OpenJDK Runtime Environment (build 17.0.7+0-17.0.7b1000.6-10550314)
+
+[32m[✓][39m IntelliJ IDEA Ultimate Edition (version 2024.2.4)
+    [32m•[39m IntelliJ at /Users/anilkumar/Applications/IntelliJ IDEA Ultimate.app
+    [32m•[39m Flutter plugin version 82.1.3
+    [32m•[39m Dart plugin version 242.22855.32
+
+[32m[✓][39m IntelliJ IDEA Ultimate Edition (version 2023.3.4)
+    [32m•[39m IntelliJ at /Users/itinkeradmin/Applications/IntelliJ IDEA Ultimate.app
+    [32m•[39m Flutter plugin version 78.1.1
+    [32m•[39m Dart plugin version 233.13763.5
+
+[32m[✓][39m VS Code (version 1.88.1)
+    [32m•[39m VS Code at /Users/anilkumar/Downloads/Visual Studio Code.app/Contents
+    [32m•[39m Flutter extension version 3.102.0
+
+[32m[✓][39m VS Code (version 1.96.4)
+    [32m•[39m VS Code at /Users/anilkumar/Downloads/Visual Studio Code 2.app/Contents
+    [32m•[39m Flutter extension version 3.102.0
+
+[32m[✓][39m VS Code (version 1.96.4)
+    [32m•[39m VS Code at /Users/anilkumar/Downloads/Visual Studio Code 3.app/Contents
+    [32m•[39m Flutter extension version 3.102.0
+
+[32m[✓][39m Connected device (3 available)
+    [32m•[39m macOS (desktop)                 • macos                 • darwin-arm64   • macOS 14.5 23F79 darwin-arm64
+    [32m•[39m Mac Designed for iPad (desktop) • mac-designed-for-ipad • darwin         • macOS 14.5 23F79 darwin-arm64
+    [32m•[39m Chrome (web)                    • chrome                • web-javascript • Google Chrome 133.0.6943.127
+    [33m![39m Error: Browsing on the local area network for Ayush iPhone. Ensure the device is unlocked and attached with a cable or associated with the same local area
+      network as this Mac.
+      The device must be opted into Developer Mode to connect wirelessly. (code -27)
+    [33m![39m Error: Browsing on the local area network for iTinker iPhone 11. Ensure the device is unlocked and attached with a cable or associated with the same local area
+      network as this Mac.
+      The device must be opted into Developer Mode to connect wirelessly. (code -27)
+
+[33m[!][39m Network resources
+    [31m✗[39m A network error occurred while checking "https://pub.dev/": Failed host lookup: 'pub.dev'
+    [31m✗[39m A network error occurred while checking "https://storage.googleapis.com/": Failed host lookup: 'storage.googleapis.com'
+    [31m✗[39m A network error occurred while checking "https://maven.google.com/": Failed host lookup: 'maven.google.com'
+    [31m✗[39m A network error occurred while checking "https://cocoapods.org/": Failed host lookup: 'cocoapods.org'
+    [31m✗[39m A network error occurred while checking "https://github.com/": Failed host lookup: 'github.com'
+
+[33m![39m Doctor found issues in 3 categories.
+```
